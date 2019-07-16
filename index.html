@@ -10,12 +10,19 @@
   <meta name="keywords" content="resume,cv,faisco,pedro,swoftware,developer" />
   <meta name="description" content="Resume Software Developer Pedro Faísco" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <style type="text/css">
+  
+  @media print {
+    .is-hidden-print {
+      display: none !important;
+    }
+  }
+</style>
 </head>
 <body>
 
 
- <nav class="navbar is-fixed-top">
+ <nav class="navbar is-fixed-top is-hidden-print">
   <div class="navbar-menu">
     <div class="navbar-end">
       <a class="navbar-item">
@@ -77,7 +84,7 @@
 
 
 
-<footer class="footer">
+<footer class="footer is-hidden-print">
   <div class="content has-text-centered">
     <p>
       by <a href="http://faisco.pt">Pedro Faísco</a>.
