@@ -3,13 +3,13 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Pedro Faísco</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
 
-    <meta name="keywords" content="resume,cv,faisco,pedro,swoftware,developer"/>
-    <meta name="description" content="Resume Software Developer Pedro Faísco"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+    <meta content="resume,cv,faisco,pedro,swoftware,developer" name="keywords"/>
+    <meta content="Resume Software Developer Pedro Faísco" name="description"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" rel="stylesheet">
     <style type="text/css">
 
         @media print {
@@ -21,14 +21,20 @@
 </head>
 <body>
 
-
-<nav class="navbar is-fixed-top is-hidden-print">
-    <div class="navbar-menu">
+<nav aria-label="main navigation" class="navbar is-fixed-top is-hidden-print" role="navigation">
+    <div class="navbar-brand">
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger" data-target="navMenu" role="button">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
         <div class="navbar-end">
             <a class="navbar-item">
                 Skills
             </a>
-            <a class="navbar-item is-active" href="#exprience">
+            <a class="navbar-item" href="#exprience">
                 Exprience
             </a>
             <a class="navbar-item">
@@ -38,7 +44,7 @@
     </div>
 </nav>
 
-<section id="intro" class="hero is-success is-fullheight">
+<section class="hero is-success is-fullheight" id="intro">
     <div class="hero-body">
         <div class="container">
             <h1 class="title">
@@ -58,7 +64,7 @@
         </div>
     </div>
 </section>
-<section id="skils" class="section">
+<section class="section" id="skils">
     <div class="container">
         <h1 class="title">
             Skills
@@ -106,9 +112,10 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
 
-<section id="carrear" class="section is-success">
+<section class="section is-success" id="carrear">
     <div class="container">
         <h1 class="title">
             Carrear
@@ -156,10 +163,11 @@
                 </ul>
             </div>
         </div>
+    </div>
 </section>
 
 
-<section id="studies" class="hero is-info is-fullheight">
+<section class="hero is-info is-fullheight" id="studies">
     <div class="hero-body">
         <div class="container">
             <h1 class="title">
@@ -189,5 +197,30 @@
     </div>
 </footer>
 </body>
+<script>document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+
+            });
+        });
+    }
+
+});</script>
 </html>
 
